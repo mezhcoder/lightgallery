@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        body {
+            padding: 40px;
+            background-image: linear-gradient(#e8f0ff 0%, white 52.08%);
+            color: #0e3481;
+            height: 100vh;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        .header h1 {
+            margin: 0;
+        }
+        .header h4 {
+            max-width: 570px;
+            display: inline-block;
+            line-height: 1.5;
+            font-weight: 500;
+            margin: 0;
+            margin-top: 12px;
+        }
+
+        /** Below CSS is completely optional **/
+        .gallery-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .gallery-item {
+            width: 200px;
+            padding: 5px;
+        }
+
+        .gallery-item img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.3.0-beta.4/css/lightgallery-bundle.min.css" />
+</head>
+<body>
+
+<div class="header">
+    <h1>lightGallery</h1>
+    <h4>lightGallery is a feature-rich, modular JavaScript gallery plugin for building beautiful image and video galleries for the web and the mobile</h4>
+</div>
+<div class="gallery-container" id="gallery-container">
+    <a class="gallery-item" data-src="https://images.unsplash.com/photo-1613541444699-39429d990353?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=80" data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@katherine_xx11' >Katherine Gu </a></h4><p> For all those years we were alone and helpless.</p>">
+        <img src="https://images.unsplash.com/photo-1613541444699-39429d990353?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=240&q=80" />
+    </a>
+    <a class="gallery-item" data-src="https://images.unsplash.com/photo-1613541444699-39429d990353?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=80" data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@katherine_xx11' >Katherine Gu </a></h4><p> For all those years we were alone and helpless.</p>">
+        <img src="https://images.unsplash.com/photo-1613541444699-39429d990353?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=240&q=80" />
+    </a>
+    <a class="gallery-item" data-src="https://images.unsplash.com/photo-1613541444699-39429d990353?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=80" data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@katherine_xx11' >Katherine Gu </a></h4><p> For all those years we were alone and helpless.</p>">
+        <img src="https://images.unsplash.com/photo-1613541444699-39429d990353?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=240&q=80" />
+    </a>
+    <a class="gallery-item" data-src="https://images.unsplash.com/photo-1613541444699-39429d990353?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=80" data-sub-html="<h4>Photo by - <a href='https://unsplash.com/@katherine_xx11' >Katherine Gu </a></h4><p> For all those years we were alone and helpless.</p>">
+        <img src="https://images.unsplash.com/photo-1613541444699-39429d990353?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=240&q=80" />
+    </a>
+</div>
+
+<script src='https://cdn.jsdelivr.net/npm/lightgallery@2.2.1/lightgallery.umd.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/lightgallery@2.2.1/lightgallery.min.js'></script>
+<script type="module">
+    import lightGallery from 'https://cdn.skypack.dev/lightgallery@2.0.0-beta.3';
+    import lgPager from 'https://cdn.skypack.dev/lightgallery@2.0.0-beta.3/plugins/pager';
+
+    lightGallery(document.getElementById('gallery-container'), {
+        speed: 500,
+        plugins: [lgPager]
+    });
+</script>
+</body>
+</html>
